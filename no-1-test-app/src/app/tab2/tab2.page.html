@@ -13,5 +13,97 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <!--<app-explore-container name="Tab 2 page"></app-explore-container>-->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          Row 1 - Col 1
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          Row 1 - Col 2
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col>3</ion-col>
+    </ion-row>
+
+   <!--Start From Typescript-->
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          {{first}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{second}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          Name
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          Surname
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          Age
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          {{person.name}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person.surname}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person.age}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          {{person2.name}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person2.surname}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person2.age}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <!--From Typescript-->
+
+  </ion-grid>
+
 </ion-content>
