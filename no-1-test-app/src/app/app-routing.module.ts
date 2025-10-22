@@ -7,12 +7,12 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'new-page',
-    loadChildren: () => import('./new-page/new-page.module').then( m => m.NewPagePageModule)
-  },
-  {
     path: 'test-page',
     loadChildren: () => import('./test-page/test-page.module').then( m => m.TestPagePageModule)
+  },
+  {
+    path: 'self-test',
+    loadChildren: () => import('./self-test/self-test.module').then( m => m.SelfTestPageModule)
   }
 ];
 @NgModule({
