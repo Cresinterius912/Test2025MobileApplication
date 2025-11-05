@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class Tab2Page {
-//These are basic properties that are used in Tab2 in a grid//
+
+  //These are basic properties that are used in Tab2 in a grid//
   first = "Hello there!";
   second = "Byeeee";
 
