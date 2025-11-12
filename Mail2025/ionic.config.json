@@ -1,0 +1,7 @@
+{
+  "name": "Mail2025",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
