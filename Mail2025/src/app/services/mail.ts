@@ -7,6 +7,7 @@ export class Mail {
   public statusList: string[] = [];
   public iconList: string[] = [];
   public emailList: any[] = [];
+  public filteredEmailList: any[] = [];
 
   constructor(){
     this.populateIconList();
@@ -214,6 +215,50 @@ export class Mail {
       icon:2
     }
   ];
+  }
+
+  filterEmails(folder:string){
+    switch(folder){
+      case "Inbox":{
+        this.filteredEmailList = this.emailList.filter(
+          email => email.status == 1 ||
+          email.status == 0 ||
+          email.status == 3);
+        break;
+      }
+      case "Sent":{
+        this.filteredEmailList = this.emailList.filter(
+          email => email.status == 2);
+        break;
+      }
+      case "Favorites":{
+        this.filteredEmailList = this.emailList.filter(
+          email => email.status == 3);
+        break;
+      }
+      case "Archived":{
+        this.filteredEmailList = this.emailList.filter(
+          email => email.status == 4);
+        break;
+      }
+      case "Deleted":{
+        this.filteredEmailList = this.emailList.filter(
+          email => email.status == 5);
+        break;
+      }
+      case "Spam":{
+        this.filteredEmailList = this.emailList.filter(
+          email => email.status == 6);
+        break;
+      }
+      default :{
+        this.filteredEmailList = this.emailList.filter(
+          email => email.status == 0 ||
+          email.status == 1 ||
+          email.status == 3);
+        break;
+      }
+    }
   }
 
   newMail(subject:string, from:string, fromName:string, message:string){
