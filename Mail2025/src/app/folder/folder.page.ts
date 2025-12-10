@@ -30,11 +30,22 @@ export class FolderPage implements OnInit {
     this.iconList = this.mailService.iconList;
     this.emailList = this.mailService.filteredEmailList;
 
+
     
   }
 
   newMessage(){
     this.router.navigate(['/new-mail']);
+  }
+
+  setStatus(emailId:number,statusId:number){
+    this.mailService.setStatus(emailId, statusId);
+  }
+
+  ngDoCheck(){
+    // This function is triggered whenever something in the page's Typescript is updated
+    this.mailService.filterEmails(this.folder);
+    this.emailList = this.mailService.filteredEmailList;
   }
 
 
